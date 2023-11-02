@@ -1,3 +1,54 @@
-*{
+* {
+    padding: 0;
+    margin:0;
     box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    background-color: whitesmoke;
+}
+
+#root {
+    margin-top: 1rem !important;
+    /* border: 2px solid red; */
+    width: 55%;
+    text-align: center;
+    margin: auto;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: rgb(28, 28, 248);
+    color: white;
+    font-weight: bold;
+}
+
+form{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    margin-top: .7rem;
+    padding: .5rem;
+    gap: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px grey;
+}
+
+input,select{
+    font-size: 1rem;
+    padding: 5px;
+}
+
+#result{
+    margin-top: 1rem;
+    color: red;
+    font-weight: bold;
+    text-align:justify;
 }

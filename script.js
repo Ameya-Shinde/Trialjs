@@ -1,13 +1,47 @@
-console.log("hello");
+const form = document.getElementById("regForm");
+const root = document.getElementById("root");
+const resDiv = document.getElementById("result");
 
-async function getdata(){
-    const url = 'http://3.7.111.238:8080/user/get-users'
-    const data = await fetch(url);
-    const users = await data.json();
+form.addEventListener("submit", async (event) => {
+    resDiv.innerHTML = "";
+  event.preventDefault();
 
-    users.forEach(ele => {
-        console.log(ele.firstName);
-    });
-}
+  const formData = new FormData(form);
+  const jsonData = {};
 
-getdata();
+  formData.forEach((value, key) => {
+    jsonData[key] = value;
+  });
+
+//   console.log(jsonData);
+
+  const url = "http://localhost:8080/emp/register";
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(jsonData),
+  });
+  console.log("Status Code : " + response.status);
+
+  let result;
+
+  if (response.status === 400) {
+    result = await response.json();
+    result.forEach(ele =>{
+        const p = document.createElement("p");
+        p.innerText = ele.error;
+        resDiv.appendChild(p);
+    })
+  } else {
+    result = await response.text();
+    const span = document.createElement("span");
+    span.innerText = result;
+    span.style.color = "green";
+    resDiv.appendChild(span);
+    form.reset();
+  }
+
+  console.log(result);
+});
