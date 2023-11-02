@@ -1,9 +1,8 @@
 const form = document.getElementById("regForm");
-const root = document.getElementById("root");
 const resDiv = document.getElementById("result");
 
 form.addEventListener("submit", async (event) => {
-    resDiv.innerHTML = "";
+  resDiv.innerHTML = "";
   event.preventDefault();
 
   const formData = new FormData(form);
@@ -13,7 +12,7 @@ form.addEventListener("submit", async (event) => {
     jsonData[key] = value;
   });
 
-//   console.log(jsonData);
+  //   console.log(jsonData);
 
   const url = "http://localhost:8080/emp/register";
   const response = await fetch(url, {
@@ -29,11 +28,11 @@ form.addEventListener("submit", async (event) => {
 
   if (response.status === 400) {
     result = await response.json();
-    result.forEach(ele =>{
-        const p = document.createElement("p");
-        p.innerText = ele.error;
-        resDiv.appendChild(p);
-    })
+    result.forEach((ele) => {
+      const p = document.createElement("p");
+      p.innerText = ele.error;
+      resDiv.appendChild(p);
+    });
   } else {
     result = await response.text();
     const span = document.createElement("span");

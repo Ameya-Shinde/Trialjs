@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="register.js"></script>
+</head>
+
+<body>
+    <div class="root">
+        <h1>Employee Registration</h1>
+
+        <form id="regForm">
+            <input required type="text" name="name" placeholder="Name (Aleast 3 Letters)">
+            <input required type="date" name="dob" placeholder="Date of Birth">
+            <select required name="gender" class="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <input required type="text" name="address" placeholder="Address (Atleast 7 Letters)">
+            <input required type="text" name="city" placeholder="City">
+            <input required type="text" name="state" placeholder="State">
+            <input required type="text" name="loginId" placeholder="Login ID">
+            <input required type="password" name="password" placeholder="Password eg: Ameya@123">
+            <button class="submitBtn" type="submit">Register</button>
+        </form>
+        <div id="result"></div>
+    </div>
+</body>
+
+</html>

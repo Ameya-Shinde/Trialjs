@@ -6,30 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <script defer src="index.js"></script>
 </head>
-
 <body>
-    <div id="root">
-        <h1>Employee Registration</h1>
-
-        <form id="regForm">
-            <input type="text" name="name" placeholder="Name (Aleast 3 Letters)">
-            <input type="date" name="dob" placeholder="Date of Birth">
-            <select name="gender" class="gender">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-            </select>
-            <input type="text" name="address" placeholder="Address (Atleast 7 Letters)">
-            <input type="text" name="city" placeholder="City">
-            <input type="text" name="state" placeholder="State">
-            <input type="text" name="loginId" placeholder="Login ID">
-            <input type="password" name="password" placeholder="Password eg: Ameya@123">
-            <button type="submit">Register</button>
-        </form>
-        <div id="result"></div>
+    <div class="home">
+        <div class="heading">
+            <h1>Welcome to Employee Registration Portal</h1>
+        </div>
+    
+        <div class="btns">
+            <a href="register.html"><button>Register</button></a>
+            <a href="login.html"><button>Login</button></a>
+        </div>
     </div>
 </body>
-
 </html>
