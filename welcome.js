@@ -42,6 +42,7 @@ async function getData() {
 }
 
 if (loginId == null) {
+    userListUl.innerHTML = "";
   welcomeMsg.innerHTML =
     '<h1>Please Login First<h1> <a href="index.html"><button class="btns">Home</button></a>';
 }else{
