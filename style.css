@@ -23,7 +23,7 @@ body{
     gap: 1rem;
 }
 
-.btns button{
+.btns{
     padding: .5rem;
     border-radius: 3px;
     border: none;

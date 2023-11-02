@@ -28,10 +28,10 @@ form.addEventListener("submit", async (event) => {
   let result = await response.json();
   console.log("Status Code : " + response.status);
   console.log(result);
-  console.log(result.loginId);
 
   if(response.status === 200){
     form.reset();
+    localStorage.setItem("loginId",result.loginId);
     window.location.href = `welcome.html?loginId=${result.loginId}`;
   }
 
