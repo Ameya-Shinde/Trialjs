@@ -14,7 +14,7 @@ body{
 }
 
 .home{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     text-align: center;
     margin: auto;
     padding: .5rem;
