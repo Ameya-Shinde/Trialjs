@@ -11,10 +11,11 @@ body{
 
 #root {
     margin-top: 1rem !important;
-    /* border: 2px solid red; */
+    border: 2px solid red;
     width: 55%;
     text-align: center;
     margin: auto;
+    padding: .5rem;
 }
 
 button{
@@ -51,4 +52,15 @@ input,select{
     color: red;
     font-weight: bold;
     text-align:justify;
+}
+
+@media screen and (max-width: 426px) {
+    
+    #root{
+        width: 100%;
+    }
+
+    form {
+        width: 85%;
+    }
 }
