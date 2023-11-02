@@ -30,7 +30,7 @@ form.addEventListener("submit", async (event) => {
   if(response.status === 200){
     form.reset();
     localStorage.setItem("loginId",result[0].loginId);
-    window.location.href = `welcome.html?loginId=${result.loginId}`;
+    window.location.href = `welcome.html?loginId=${result[0].loginId}`;
   }else{
     result.forEach((ele) =>{
         const p = document.createElement("p");

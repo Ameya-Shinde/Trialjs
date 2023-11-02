@@ -10,6 +10,7 @@
 
 body{
     display: flex;
+    flex-direction: column;
     background-color: whitesmoke;
 }
 
@@ -75,6 +76,10 @@ input,select{
     color: red;
     font-weight: bold;
     text-align:justify;
+}
+
+.users{
+    padding-left: 1rem;
 }
 
 @media screen and (max-width: 426px) {
