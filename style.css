@@ -70,7 +70,7 @@ input,select{
     padding: 5px;
 }
 
-#result{
+.result{
     margin-top: 1rem;
     color: red;
     font-weight: bold;

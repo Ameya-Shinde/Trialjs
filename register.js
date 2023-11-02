@@ -1,5 +1,5 @@
 const form = document.getElementById("regForm");
-const resDiv = document.getElementById("result");
+const resDiv = document.querySelector(".result");
 
 form.addEventListener("submit", async (event) => {
   resDiv.innerHTML = "";

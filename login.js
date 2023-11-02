@@ -1,7 +1,5 @@
 const form = document.getElementById("loginForm");
-const err = document.getElementById("errdiv");
-
-console.log("hello");
+const err = document.querySelector(".result");
 
 form.addEventListener("submit", async (event) => {
   err.innerHTML = "";
@@ -31,8 +29,14 @@ form.addEventListener("submit", async (event) => {
 
   if(response.status === 200){
     form.reset();
-    localStorage.setItem("loginId",result.loginId);
+    localStorage.setItem("loginId",result[0].loginId);
     window.location.href = `welcome.html?loginId=${result.loginId}`;
+  }else{
+    result.forEach((ele) =>{
+        const p = document.createElement("p");
+        p.innerText = ele.error;
+        err.appendChild(p);
+    });
   }
 
 });
