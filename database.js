@@ -1,6 +1,6 @@
 const empTblData = document.getElementById("empTblData");
 
-const url = 'http://localhost:8080/emp/get-user';
+const url = 'http://localhost:8000/emp/get-user';
 
 async function getEmpData(){
     const response = await fetch(url);

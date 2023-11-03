@@ -14,7 +14,7 @@ form.addEventListener("submit", async (event) => {
 
   //   console.log(jsonData);
 
-  const url = "http://localhost:8080/emp/register";
+  const url = "http://localhost:8000/emp/register";
   const response = await fetch(url, {
     method: "POST",
     headers: {

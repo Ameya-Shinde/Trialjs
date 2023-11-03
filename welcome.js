@@ -12,8 +12,8 @@ logoutBtn.addEventListener("click", () => {
   localStorage.removeItem("loginId");
 });
 
-const getUserUrl = `http://localhost:8080/emp/get-user?loginId=${loginId}`;
-const getUserListUrl = 'http://localhost:8080/emp/get-user';
+const getUserUrl = `http://localhost:8000/emp/get-user?loginId=${loginId}`;
+const getUserListUrl = 'http://localhost:8000/emp/get-user';
 
 async function getData() {
   const user = await fetch(getUserUrl);
