@@ -24,3 +24,10 @@ async function getEmpData(){
 }
 
 getEmpData();
+
+
+const remove = document.getElementById("delete");
+
+remove.addEventListener("click", () =>{
+    
+});

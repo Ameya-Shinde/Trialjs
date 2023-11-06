@@ -2,7 +2,7 @@ const form = document.getElementById("regForm");
 const resDiv = document.querySelector(".result");
 
 form.addEventListener("submit", async (event) => {
-  resDiv.innerHTML = "";
+  resDiv.innerHTML = `<i class="fa-solid fa-spinner fa-spin fa-2xl"></i>`;
   event.preventDefault();
 
   const formData = new FormData(form);
@@ -38,6 +38,7 @@ form.addEventListener("submit", async (event) => {
     const span = document.createElement("span");
     span.innerText = result;
     span.style.color = "green";
+    resDiv.innerHTML = "";
     resDiv.appendChild(span);
     form.reset();
   }
